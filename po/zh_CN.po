@@ -8,30 +8,356 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PowerTOP\n"
 "Report-Msgid-Bugs-To: \"powertop@lists.01.org\"\n"
-"POT-Creation-Date: 2013-11-04 10:45-0800\n"
+"POT-Creation-Date: 2018-03-01 15:10-0600\n"
 "PO-Revision-Date: 2018-03-01 14:54-0600\n"
 "Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/"
-"PowerTOP/language/zh_CN/)\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/PowerTOP/"
+"language/zh_CN/)\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.0.5\n"
 
-#: src/parameters/persistent.cpp:46 src/parameters/persistent.cpp:140
-msgid "Cannot save to file"
-msgstr "无法保存到文件"
-
-#: src/parameters/persistent.cpp:78 src/parameters/persistent.cpp:165
-msgid "Cannot load from file"
-msgstr "无法载入文件"
-
-#: src/parameters/persistent.cpp:123
+#: src/calibrate/calibrate.cpp:238
 #, c-format
-msgid "Loaded %i prior measurements\n"
-msgstr "已载入之前 %i 个测量\n"
+msgid "Cannot create temp file\n"
+msgstr "无法创建临时文件\n"
+
+#: src/calibrate/calibrate.cpp:258
+#, c-format
+msgid "Calibrating: CPU usage on %i threads\n"
+msgstr "正在校准 %i 线程中的 CPU 使用\n"
+
+#: src/calibrate/calibrate.cpp:273
+#, c-format
+msgid "Calibrating: CPU wakeup power consumption\n"
+msgstr "正在校准 CPU 唤醒电源消耗\n"
+
+#: src/calibrate/calibrate.cpp:290
+#, c-format
+msgid "Calibrating USB devices\n"
+msgstr "正在校准 USB 设备\n"
+
+#: src/calibrate/calibrate.cpp:292 src/calibrate/calibrate.cpp:309
+#: src/calibrate/calibrate.cpp:317 src/calibrate/calibrate.cpp:334
+#, c-format
+msgid ".... device %s \n"
+msgstr ".... 设备 %s \n"
+
+#: src/calibrate/calibrate.cpp:307
+#, c-format
+msgid "Calibrating radio devices\n"
+msgstr "正在校准无线电设备\n"
+
+#: src/calibrate/calibrate.cpp:331
+#, c-format
+msgid "Calibrating backlight\n"
+msgstr "正在校准背光\n"
+
+#: src/calibrate/calibrate.cpp:355 src/calibrate/calibrate.cpp:365
+#, c-format
+msgid "Calibrating idle\n"
+msgstr "正在校准空闲状态\n"
+
+#: src/calibrate/calibrate.cpp:378
+#, c-format
+msgid "Calibrating: disk usage \n"
+msgstr "正在校准磁盘使用\n"
+
+#: src/calibrate/calibrate.cpp:403
+msgid "Starting PowerTOP power estimate calibration \n"
+msgstr "正在启动 PowerTOP 电量预计校准 \n"
+
+#: src/calibrate/calibrate.cpp:426
+msgid "Finishing PowerTOP power estimate calibration \n"
+msgstr "正在完成 PowerTOP 电量预计校准 \n"
+
+#: src/calibrate/calibrate.cpp:430
+#, c-format
+msgid "Parameters after calibration:\n"
+msgstr "校准后参数：\n"
+
+#: src/cpu/abstract_cpu.cpp:74
+msgid "Idle"
+msgstr ""
+
+#: src/cpu/abstract_cpu.cpp:76
+msgid "Turbo Mode"
+msgstr ""
+
+#: src/cpu/cpu_core.cpp:37 src/cpu/cpu_core.cpp:93 src/cpu/intel_cpus.cpp:322
+#, c-format
+msgid "  Core"
+msgstr "  核心"
+
+#: src/cpu/cpu.cpp:81
+#, c-format
+msgid "cpu package %i"
+msgstr "CPU 封装 %i"
+
+#: src/cpu/cpu.cpp:82
+msgid "cpu package"
+msgstr "CPU 封装"
+
+#: src/cpu/cpu.cpp:85 src/cpu/cpu.cpp:92
+#, fuzzy, c-format
+msgid "package-%i"
+msgstr "封装 %i"
+
+#: src/cpu/cpu.cpp:86
+msgid "cpu rapl package"
+msgstr "CPU RAPL 封装"
+
+#: src/cpu/cpu.cpp:93
+msgid "dram rapl package"
+msgstr "DRAM RAPL 封装"
+
+#: src/cpu/cpu.cpp:458
+msgid "Processor Idle State Report"
+msgstr ""
+
+#: src/cpu/cpu.cpp:522 src/cpu/cpu.cpp:740 src/cpu/cpu_package.cpp:47
+#, c-format
+msgid "Package"
+msgstr "封装"
+
+#: src/cpu/cpu.cpp:553 src/cpu/cpu.cpp:762
+#, fuzzy, c-format
+msgid "Core %d"
+msgstr "核心 %i"
+
+#: src/cpu/cpu.cpp:560
+#, fuzzy, c-format
+msgid "GPU %d"
+msgstr "GPU %i"
+
+#: src/cpu/cpu.cpp:581
+#, fuzzy
+msgid "CPU"
+msgstr "CPU %i"
+
+#: src/cpu/cpu.cpp:663
+msgid "Processor Frequency Report"
+msgstr ""
+
+#: src/cpu/cpu.cpp:783
+#, fuzzy, c-format
+msgid "CPU %d"
+msgstr "CPU %i"
+
+#: src/cpu/cpu.cpp:984
+#, c-format
+msgid "cpu_idle event returned no state?\n"
+msgstr "cpu_idle（空闲）事件没有返回状态？\n"
+
+#: src/cpu/cpu.cpp:999
+#, c-format
+msgid "power or cpu_frequency event returned no state?\n"
+msgstr "power（电源）或 cpu_frequency（频率）事件没有返回状态？\n"
+
+#: src/cpu/cpu_linux.cpp:79
+msgid "C0 polling"
+msgstr "C0 轮巡"
+
+#: src/cpu/cpu_linux.cpp:242 src/cpu/cpu_linux.cpp:341
+#: src/cpu/intel_cpus.cpp:649
+#, c-format
+msgid " CPU %i"
+msgstr " CPU %i"
+
+#: src/cpu/cpu_package.cpp:105 src/cpu/intel_cpus.cpp:410
+#, c-format
+msgid "  Package"
+msgstr "  封装"
+
+#: src/cpu/intel_cpus.cpp:127
+#, c-format
+msgid "read_msr cpu%d 0x%llx : "
+msgstr "read_msr cpu%d 0x%llx："
+
+#: src/cpu/intel_cpus.cpp:572
+msgid "C0 active"
+msgstr "C0 已激活"
+
+#: src/cpu/intel_cpus.cpp:630
+#, c-format
+msgid "Average"
+msgstr ""
+
+#: src/cpu/intel_gpu.cpp:64
+#, fuzzy, c-format
+msgid "  GPU "
+msgstr "GPU %i"
+
+#: src/devices/ahci.cpp:154
+#, c-format
+msgid "SATA link: %s"
+msgstr "SATA 链路：%s"
+
+#: src/devices/ahci.cpp:156
+#, c-format
+msgid "SATA disk: %s"
+msgstr "SATA 磁盘：%s"
+
+#: src/devices/ahci.cpp:374
+msgid "AHCI ALPM Residency Statistics - Not supported on this macine"
+msgstr ""
+
+#: src/devices/ahci.cpp:389
+msgid "Link"
+msgstr ""
+
+#: src/devices/ahci.cpp:390
+#, fuzzy
+msgid "Active"
+msgstr "C0 已激活"
+
+#: src/devices/ahci.cpp:391
+msgid "Partial"
+msgstr ""
+
+#: src/devices/ahci.cpp:392
+msgid "Slumber"
+msgstr ""
+
+#: src/devices/ahci.cpp:393
+msgid "Devslp"
+msgstr ""
+
+#: src/devices/ahci.cpp:399
+msgid "AHCI ALPM Residency Statistics"
+msgstr ""
+
+#: src/devices/alsa.cpp:77
+#, c-format
+msgid "Audio codec %s: %s (%s)"
+msgstr "音频设备 %s：%s (%s)"
+
+#: src/devices/alsa.cpp:79 src/devices/alsa.cpp:81
+#, c-format
+msgid "Audio codec %s: %s"
+msgstr "音频设备 %s：%s"
+
+#: src/devices/devfreq.cpp:261
+#, fuzzy
+msgid "Device Freq stats"
+msgstr "设备统计"
+
+#: src/devices/devfreq.cpp:279
+msgid " Devfreq is not enabled"
+msgstr ""
+
+#: src/devices/devfreq.cpp:284
+msgid " No devfreq devices available"
+msgstr ""
+
+#: src/devices/device.cpp:172 src/process/do_process.cpp:831
+#, c-format
+msgid "The battery reports a discharge rate of %sW\n"
+msgstr "电池报告放电速率为 %sW\n"
+
+#: src/devices/device.cpp:174 src/process/do_process.cpp:833
+#, c-format
+msgid "The power consumed was %sJ\n"
+msgstr ""
+
+#: src/devices/device.cpp:180
+#, c-format
+msgid "System baseline power is estimated at %sW\n"
+msgstr "系统基线耗电量为 %sW\n"
+
+#: src/devices/device.cpp:187
+msgid "Power est.    Usage     Device name\n"
+msgstr "预计电量    用量     设备名\n"
+
+#: src/devices/device.cpp:189
+msgid "              Usage     Device name\n"
+msgstr "              用量     设备名\n"
+
+#: src/devices/device.cpp:256
+#, fuzzy
+msgid "The battery reports a discharge rate of: "
+msgstr "电池报告放电速率为 %sW\n"
+
+#: src/devices/device.cpp:261
+msgid "The power consumed was : "
+msgstr ""
+
+#: src/devices/device.cpp:268
+#, fuzzy
+msgid "The system baseline power is estimated at: "
+msgstr "系统基线耗电量为 %sW\n"
+
+#: src/devices/device.cpp:277 src/process/do_process.cpp:850
+#: src/process/do_process.cpp:852 src/process/do_process.cpp:926
+#: src/process/do_process.cpp:1077
+msgid "Usage"
+msgstr "用量"
+
+#: src/devices/device.cpp:278
+#, fuzzy
+msgid "Device Name"
+msgstr "设备统计"
+
+#: src/devices/device.cpp:280 src/process/do_process.cpp:935
+#: src/process/do_process.cpp:1082
+msgid "PW Estimate"
+msgstr ""
+
+#: src/devices/device.cpp:317
+msgid "Device Power Report"
+msgstr ""
+
+#: src/devices/network.cpp:177
+#, c-format
+msgid "Network interface: %s (%s)"
+msgstr "网络接口：%s (%s)"
+
+#: src/devices/rfkill.cpp:65 src/devices/rfkill.cpp:69
+#, c-format
+msgid "Radio device: %s"
+msgstr "无线设备：%s"
+
+#: src/devices/runtime_pm.cpp:216
+#, c-format
+msgid "I2C %s (%s): %s"
+msgstr ""
+
+#: src/devices/runtime_pm.cpp:216 src/tuning/tuningi2c.cpp:57
+#: src/tuning/tuningi2c.cpp:59
+msgid "Adapter"
+msgstr ""
+
+#: src/devices/runtime_pm.cpp:216 src/devlist.cpp:331
+#: src/tuning/tuningi2c.cpp:57 src/tuning/tuningi2c.cpp:59
+#, fuzzy
+msgid "Device"
+msgstr "设备统计"
+
+#: src/devices/runtime_pm.cpp:241
+#, c-format
+msgid "PCI Device: %s"
+msgstr "PCI 设备：%s"
+
+#: src/devices/usb.cpp:51 src/devices/usb.cpp:96 src/devices/usb.cpp:98
+#, c-format
+msgid "USB device: %s"
+msgstr "USB 设备：%s"
+
+#: src/devices/usb.cpp:94
+#, c-format
+msgid "USB device: %s (%s)"
+msgstr "USB 设备：%s (%s)"
+
+#: src/devlist.cpp:330
+msgid "Process"
+msgstr ""
+
+#: src/devlist.cpp:347
+msgid "Process Device Activity"
+msgstr ""
 
 #: src/display.cpp:70
 msgid "Overview"
@@ -49,234 +375,236 @@ msgstr "频率统计"
 msgid "Device stats"
 msgstr "设备统计"
 
-#: src/display.cpp:130
+#: src/display.cpp:131
 msgid "Exit"
 msgstr "退出"
 
-#: src/cpu/cpu_core.cpp:37 src/cpu/cpu_core.cpp:93 src/cpu/intel_cpus.cpp:245
-#, c-format
-msgid "  Core"
-msgstr "  核心"
+#: src/display.cpp:132
+msgid "Navigate"
+msgstr ""
 
-#: src/cpu/cpu.cpp:80
-#, c-format
-msgid "cpu package %i"
-msgstr "CPU 封装 %i"
-
-#: src/cpu/cpu.cpp:81
-msgid "cpu package"
-msgstr "CPU 封装"
-
-#: src/cpu/cpu.cpp:84
-#, c-format
-msgid "cpu rapl package %i"
-msgstr "CPU RAPL 封装 %i"
-
-#: src/cpu/cpu.cpp:85
-msgid "cpu rapl package"
-msgstr "CPU RAPL 封装"
-
-#: src/cpu/cpu.cpp:89
-#, c-format
-msgid "dram rapl package %i"
-msgstr "DRAM RAPL 封装 %i"
-
-#: src/cpu/cpu.cpp:90
-msgid "dram rapl package"
-msgstr "DRAM RAPL 封装"
-
-#: src/cpu/cpu.cpp:459 src/cpu/cpu.cpp:586
-#, c-format
-msgid "Package %i"
-msgstr "封装 %i"
-
-#: src/cpu/cpu.cpp:491 src/cpu/cpu.cpp:606
-#, c-format
-msgid "Core %i"
-msgstr "核心 %i"
-
-#: src/cpu/cpu.cpp:493
-#, c-format
-msgid "GPU %i"
-msgstr "GPU %i"
-
-#: src/cpu/cpu.cpp:515 src/cpu/cpu.cpp:627
-#, c-format
-msgid "CPU %i"
-msgstr "CPU %i"
-
-#: src/cpu/cpu.cpp:807
-#, c-format
-msgid "cpu_idle event returned no state?\n"
-msgstr "cpu_idle（空闲）事件没有返回状态？\n"
-
-#: src/cpu/cpu.cpp:822
-#, c-format
-msgid "power or cpu_frequency event returned no state?\n"
-msgstr "power（电源）或 cpu_frequency（频率）事件没有返回状态？\n"
-
-#: src/cpu/cpu_linux.cpp:79
-msgid "C0 polling"
-msgstr "C0 轮巡"
-
-#: src/cpu/cpu_linux.cpp:240 src/cpu/cpu_linux.cpp:339
-#: src/cpu/intel_cpus.cpp:521
-#, c-format
-msgid " CPU %i"
-msgstr " CPU %i"
-
-#: src/cpu/cpu_package.cpp:47
-#, c-format
-msgid "Package"
-msgstr "封装"
-
-#: src/cpu/cpu_package.cpp:105 src/cpu/intel_cpus.cpp:297
-#, c-format
-msgid "  Package"
-msgstr "  封装"
-
-#: src/cpu/intel_cpus.cpp:81
-#, c-format
-msgid "read_msr cpu%d 0x%llx : "
-msgstr "read_msr cpu%d 0x%llx："
-
-#: src/cpu/intel_cpus.cpp:445
-msgid "C0 active"
-msgstr "C0 已激活"
-
-#: src/cpu/intel_cpus.cpp:504
-#, c-format
-msgid "Actual"
-msgstr "实际"
-
-#: src/lib.cpp:286
+#: src/lib.cpp:288
 #, c-format
 msgid "%7sW"
 msgstr "%7sW"
 
-#: src/lib.cpp:289
+#: src/lib.cpp:291
 #, c-format
 msgid "    0 mW"
 msgstr "    0 mW"
 
-#: src/lib.cpp:408
+#: src/lib.cpp:410
 msgid "PS/2 Touchpad / Keyboard / Mouse"
 msgstr "PS/2 触摸板 / 键盘 / 鼠标"
 
-#: src/lib.cpp:409
+#: src/lib.cpp:411
 msgid "SATA controller"
 msgstr "SATA 控制器"
 
-#: src/lib.cpp:410
+#: src/lib.cpp:412
 msgid "Intel built in USB hub"
 msgstr "Intel 内建 USB 集线器"
 
-#: src/lib.cpp:482 src/lib.cpp:514
+#: src/lib.cpp:467
+#, c-format
+msgid "glob returned GLOB_NOSPACE\n"
+msgstr ""
+
+#: src/lib.cpp:471
+#, c-format
+msgid "glob returned GLOB_ABORTED\n"
+msgstr ""
+
+#: src/lib.cpp:475
+#, c-format
+msgid "glob returned GLOB_NOMATCH\n"
+msgstr ""
+
+#: src/lib.cpp:513 src/lib.cpp:549
 #, c-format
 msgid ""
 "Model-specific registers (MSR)\t\t\t not found (try enabling "
 "CONFIG_X86_MSR).\n"
 msgstr "特殊模块寄存器 (MSR)\t\t\t未找到（尝试启用 CONFIG_X86_MSR)。\n"
 
-#: src/process/do_process.cpp:817
-#, c-format
-msgid ""
-"Estimated power: %5.1f    Measured power: %5.1f    Sum: %5.1f\n"
-"\n"
+#: src/main.cpp:102
+#, fuzzy, c-format
+msgid "PowerTOP version "
+msgstr "PowerTOP 版本"
+
+#: src/main.cpp:108
+msgid "Set refresh time out"
+msgstr "设定刷新延时"
+
+#: src/main.cpp:121
+msgid "Usage: powertop [OPTIONS]"
+msgstr "用法：powertop [选项]"
+
+#: src/main.cpp:122
+#, fuzzy
+msgid "sets all tunable options to their GOOD setting"
+msgstr "将所有可调项设置为理想值"
+
+#: src/main.cpp:123
+msgid "runs powertop in calibration mode"
+msgstr "以校准模式运行 PowerTOP"
+
+#: src/main.cpp:124 src/main.cpp:127
+msgid "[=filename]"
 msgstr ""
-"预计耗电量: %5.1f    实测耗电量: %5.1f    总计: %5.1f\n"
-"\n"
 
-#: src/process/do_process.cpp:828 src/devices/device.cpp:171
+#: src/main.cpp:124
+msgid "generate a csv report"
+msgstr "生成 CSV 报告"
+
+#: src/main.cpp:125
+msgid "run in \"debug\" mode"
+msgstr "以“除错”模式运行"
+
+#: src/main.cpp:126
+msgid "[=devnode]"
+msgstr "[=devnode]"
+
+#: src/main.cpp:126
+msgid "uses an Extech Power Analyzer for measurements"
+msgstr "使用 Extech 电源分析仪进行测量"
+
+#: src/main.cpp:127
+msgid "generate a html report"
+msgstr "生成 HTML 报告"
+
+#: src/main.cpp:128
+msgid "[=iterations] number of times to run each test"
+msgstr "[=重复数] 运行每项测试的次数"
+
+#: src/main.cpp:129
+msgid "suppress stderr output"
+msgstr "阻止 stderr（标准错误）输出"
+
+#: src/main.cpp:130 src/main.cpp:131
+msgid "[=seconds]"
+msgstr "[=秒]"
+
+#: src/main.cpp:130
+msgid "interval for power consumption measurement"
+msgstr ""
+
+#: src/main.cpp:131
+msgid "generate a report for 'x' seconds"
+msgstr "生成指定 'x' 秒内的报告"
+
+#: src/main.cpp:132
+msgid "[=workload]"
+msgstr "[=任务]"
+
+#: src/main.cpp:132
+msgid "file to execute for workload"
+msgstr "要执行的任务文件"
+
+#: src/main.cpp:133
+msgid "print version information"
+msgstr "显示版本信息"
+
+#: src/main.cpp:134
+msgid "print this help menu"
+msgstr "显示此帮助菜单"
+
+#: src/main.cpp:136
+#, fuzzy
+msgid "For more help please refer to the 'man 8 powertop'"
+msgstr "请查阅 README 以获得更多帮助"
+
+#: src/main.cpp:231
 #, c-format
-msgid "The battery reports a discharge rate of %sW\n"
-msgstr "电池报告放电速率为 %sW\n"
+msgid "Unknown issue running workload!\n"
+msgstr "运行任务时遇到未知问题！\n"
 
-#: src/process/do_process.cpp:833
+#: src/main.cpp:288
+msgid "PowerTOP is out of memory. PowerTOP is Aborting"
+msgstr "PowerTOP 内存溢出。 PowerTOP 正在退出。"
+
+#: src/main.cpp:296
 #, c-format
-msgid "The estimated remaining time is %i hours, %i minutes\n"
-msgstr "估计剩余时间 %i 小时， %i 分钟\n"
+msgid "Preparing to take measurements\n"
+msgstr "正在准备测量\n"
 
-#: src/process/do_process.cpp:841
-msgid "Summary"
-msgstr "摘要"
+#: src/main.cpp:301
+#, c-format
+msgid "Taking %d measurement(s) for a duration of %d second(s) each.\n"
+msgstr "正在执行 %d 次测量，每次持续 %d 秒。\n"
 
-#: src/process/do_process.cpp:841 src/process/do_process.cpp:1013
-msgid "wakeups/second"
-msgstr "每秒唤醒数"
+#: src/main.cpp:303
+#, c-format
+msgid "Measuring workload %s.\n"
+msgstr "正在测量任务 %s。\n"
 
-#: src/process/do_process.cpp:841
-msgid "GPU ops/seconds"
-msgstr "每秒 GPU 操作数"
+#: src/main.cpp:326
+#, c-format
+msgid "PowerTOP "
+msgstr "PowerTOP "
 
-#: src/process/do_process.cpp:841
-msgid "VFS ops/sec and"
-msgstr "每秒 VFS 操作数及"
+#: src/main.cpp:327 src/main.cpp:377
+#, c-format
+msgid "exiting...\n"
+msgstr "正在退出…\n"
 
-#: src/process/do_process.cpp:841 src/process/do_process.cpp:1017
-msgid "CPU use"
-msgstr "CPU 占用"
+#: src/main.cpp:361
+#, c-format
+msgid "modprobe cpufreq_stats failed"
+msgstr ""
 
-#: src/process/do_process.cpp:845 src/process/do_process.cpp:904
-#: src/process/do_process.cpp:1023
-msgid "Power est."
-msgstr "估计电量"
+#: src/main.cpp:364
+#, c-format
+msgid "modprobe msr failed"
+msgstr ""
 
-#: src/process/do_process.cpp:845 src/process/do_process.cpp:847
-#: src/process/do_process.cpp:908 src/process/do_process.cpp:1027
-msgid "Usage"
-msgstr "用量"
+#: src/main.cpp:376 src/main.cpp:380
+#, c-format
+msgid "Failed to mount debugfs!\n"
+msgstr "挂载 debugfs 失败！\n"
 
-#: src/process/do_process.cpp:845 src/process/do_process.cpp:847
-#: src/process/do_process.cpp:1029
-msgid "Events/s"
-msgstr "每秒事件数"
+#: src/main.cpp:381
+#, c-format
+msgid "Should still be able to auto tune...\n"
+msgstr ""
 
-#: src/process/do_process.cpp:845 src/process/do_process.cpp:847
-#: src/process/do_process.cpp:918 src/process/do_process.cpp:1031
-msgid "Category"
-msgstr "分类"
+#: src/main.cpp:463
+#, c-format
+msgid "Invalid CSV filename\n"
+msgstr ""
 
-#: src/process/do_process.cpp:845 src/process/do_process.cpp:847
-#: src/process/do_process.cpp:920 src/process/do_process.cpp:1033
-msgid "Description"
-msgstr "描述"
+#: src/main.cpp:479
+#, c-format
+msgid "Invalid HTML filename\n"
+msgstr ""
 
-#: src/process/do_process.cpp:899
-msgid "Overview of Software Power Consumers"
-msgstr "每软件电量消耗概览"
+#: src/main.cpp:488
+#, c-format
+msgid "Quiet mode failed!\n"
+msgstr "静默模式出错！\n"
 
-#: src/process/do_process.cpp:910
-msgid "Wakeups/s"
-msgstr "每秒唤醒数"
+#: src/main.cpp:555
+msgid "Leaving PowerTOP"
+msgstr "正在离开 PowerTOP"
 
-#: src/process/do_process.cpp:912
-msgid "GPU ops/s"
-msgstr "每秒 GPU 操作数"
+#: src/parameters/persistent.cpp:46 src/parameters/persistent.cpp:155
+msgid "Cannot save to file"
+msgstr "无法保存到文件"
 
-#: src/process/do_process.cpp:914
-msgid "Disk IO/s"
-msgstr "每秒磁盘 IO 用量"
+#: src/parameters/persistent.cpp:89 src/parameters/persistent.cpp:180
+msgid "Cannot load from file"
+msgstr "无法载入文件"
 
-#: src/process/do_process.cpp:916
-msgid "GFX Wakeups/s"
-msgstr "每秒 GFX 唤醒数"
+#: src/parameters/persistent.cpp:138
+#, c-format
+msgid "Loaded %i prior measurements\n"
+msgstr "已载入之前 %i 个测量\n"
 
-#: src/process/do_process.cpp:1010
-msgid "Power Consumption Summary"
-msgstr "电量消耗概览"
-
-#: src/process/do_process.cpp:1014
-msgid "GPU ops/second"
-msgstr "每秒 GPU 操作数"
-
-#: src/process/do_process.cpp:1015
-msgid "VFS ops/sec"
-msgstr "每秒 VFS 操作数"
-
-#: src/process/do_process.cpp:1016
-msgid "GFX wakes/sec and"
-msgstr "每秒 GFX 唤醒数和"
+#: src/parameters/persistent.cpp:181
+msgid ""
+"File will be loaded after taking minimum number of measurement(s) with "
+"battery only \n"
+msgstr ""
 
 #: src/perf/perf.cpp:115
 #, c-format
@@ -296,346 +624,316 @@ msgstr ""
 msgid "as well as support for trace points in the kernel:\n"
 msgstr "以及内核中追溯点支持：\n"
 
-#: src/devices/device.cpp:177
+#: src/process/do_process.cpp:819
 #, c-format
-msgid "System baseline power is estimated at %sW\n"
-msgstr "系统基线耗电量为 %sW\n"
+msgid ""
+"Estimated power: %5.1f    Measured power: %5.1f    Sum: %5.1f\n"
+"\n"
+msgstr ""
+"预计耗电量: %5.1f    实测耗电量: %5.1f    总计: %5.1f\n"
+"\n"
 
-#: src/devices/device.cpp:184
-msgid "Power est.    Usage     Device name\n"
-msgstr "预计电量    用量     设备名\n"
-
-#: src/devices/device.cpp:186
-msgid "              Usage     Device name\n"
-msgstr "              用量     设备名\n"
-
-#: src/devices/alsa.cpp:77
+#: src/process/do_process.cpp:838
 #, c-format
-msgid "Audio codec %s: %s (%s)"
-msgstr "音频设备 %s：%s (%s)"
+msgid "The estimated remaining time is %i hours, %i minutes\n"
+msgstr "估计剩余时间 %i 小时， %i 分钟\n"
 
-#: src/devices/alsa.cpp:79 src/devices/alsa.cpp:81
-#, c-format
-msgid "Audio codec %s: %s"
-msgstr "音频设备 %s：%s"
+#: src/process/do_process.cpp:846
+msgid "Summary"
+msgstr "摘要"
 
-#: src/devices/runtime_pm.cpp:225
-#, c-format
-msgid "PCI Device: %s"
-msgstr "PCI 设备：%s"
+#: src/process/do_process.cpp:846
+msgid "wakeups/second"
+msgstr "每秒唤醒数"
 
-#: src/devices/usb.cpp:49 src/devices/usb.cpp:92 src/devices/usb.cpp:94
-#, c-format
-msgid "USB device: %s"
-msgstr "USB 设备：%s"
+#: src/process/do_process.cpp:846
+msgid "GPU ops/seconds"
+msgstr "每秒 GPU 操作数"
 
-#: src/devices/usb.cpp:90
-#, c-format
-msgid "USB device: %s (%s)"
-msgstr "USB 设备：%s (%s)"
+#: src/process/do_process.cpp:846
+msgid "VFS ops/sec and"
+msgstr "每秒 VFS 操作数及"
 
-#: src/devices/ahci.cpp:142
-#, c-format
-msgid "SATA link: %s"
-msgstr "SATA 链路：%s"
+#: src/process/do_process.cpp:846
+msgid "CPU use"
+msgstr "CPU 占用"
 
-#: src/devices/ahci.cpp:144
-#, c-format
-msgid "SATA disk: %s"
-msgstr "SATA 磁盘：%s"
+#: src/process/do_process.cpp:850
+msgid "Power est."
+msgstr "估计电量"
 
-#: src/devices/rfkill.cpp:64 src/devices/rfkill.cpp:68
-#, c-format
-msgid "Radio device: %s"
-msgstr "无线设备：%s"
+#: src/process/do_process.cpp:850 src/process/do_process.cpp:852
+#: src/process/do_process.cpp:1078
+msgid "Events/s"
+msgstr "每秒事件数"
 
-#: src/devices/network.cpp:176
+#: src/process/do_process.cpp:850 src/process/do_process.cpp:852
+#: src/process/do_process.cpp:931 src/process/do_process.cpp:1079
+msgid "Category"
+msgstr "分类"
+
+#: src/process/do_process.cpp:850 src/process/do_process.cpp:852
+#: src/process/do_process.cpp:932 src/process/do_process.cpp:1080
+#: src/tuning/tuning.cpp:243 src/tuning/tuning.cpp:271
+#: src/tuning/tuning.cpp:289
+msgid "Description"
+msgstr "描述"
+
+#: src/process/do_process.cpp:927
+msgid "Wakeups/s"
+msgstr "每秒唤醒数"
+
+#: src/process/do_process.cpp:928
+msgid "GPU ops/s"
+msgstr "每秒 GPU 操作数"
+
+#: src/process/do_process.cpp:929
+msgid "Disk IO/s"
+msgstr "每秒磁盘 IO 用量"
+
+#: src/process/do_process.cpp:930
+msgid "GFX Wakeups/s"
+msgstr "每秒 GFX 唤醒数"
+
+#: src/process/do_process.cpp:1017
+msgid "Overview of Software Power Consumers"
+msgstr "每软件电量消耗概览"
+
+#: src/process/do_process.cpp:1057
+msgid "Target:"
+msgstr ""
+
+#: src/process/do_process.cpp:1058
+msgid "1 units/s"
+msgstr ""
+
+#: src/process/do_process.cpp:1059
+msgid "System: "
+msgstr ""
+
+#: src/process/do_process.cpp:1061
+#, fuzzy
+msgid " wakeup/s"
+msgstr "每秒唤醒数"
+
+#: src/process/do_process.cpp:1062
+msgid "CPU: "
+msgstr ""
+
+#: src/process/do_process.cpp:1064
+#, fuzzy, c-format
+msgid "% usage"
+msgstr "用量"
+
+#: src/process/do_process.cpp:1065
+msgid "GPU:"
+msgstr ""
+
+#: src/process/do_process.cpp:1067 src/process/do_process.cpp:1073
+#, fuzzy
+msgid " ops/s"
+msgstr "每秒 GPU 操作数"
+
+#: src/process/do_process.cpp:1068
+msgid "GFX:"
+msgstr ""
+
+#: src/process/do_process.cpp:1070
+#, fuzzy
+msgid " wakeups/s"
+msgstr "每秒唤醒数"
+
+#: src/process/do_process.cpp:1071
+msgid "VFS:"
+msgstr ""
+
+#: src/process/do_process.cpp:1139
+#, fuzzy
+msgid "Top 10 Power Consumers"
+msgstr "每软件电量消耗概览"
+
+#: src/report/report.cpp:122
+#, fuzzy
+msgid "PowerTOP Version"
+msgstr "PowerTOP 版本"
+
+#: src/report/report.cpp:131
+#, fuzzy
+msgid "Kernel Version"
+msgstr "PowerTOP 版本"
+
+#: src/report/report.cpp:135
+msgid "System Name"
+msgstr ""
+
+#: src/report/report.cpp:142
+msgid "CPU Information"
+msgstr ""
+
+#: src/report/report.cpp:154
+msgid "OS Information"
+msgstr ""
+
+#: src/report/report.cpp:161
+#, fuzzy
+msgid "System Information"
+msgstr "显示版本信息"
+
+#: src/report/report.cpp:195
+#, fuzzy, c-format
+msgid "Cannot open output file %s (%s)\n"
+msgstr "无法创建临时文件\n"
+
+#: src/report/report.cpp:211
 #, c-format
-msgid "Network interface: %s (%s)"
-msgstr "网络接口：%s (%s)"
+msgid "PowerTOP outputting using base filename %s\n"
+msgstr ""
+
+#: src/tuning/bluetooth.cpp:46 src/tuning/ethernet.cpp:50
+#: src/tuning/runtime.cpp:42 src/tuning/tunable.cpp:49
+#: src/tuning/tuningi2c.cpp:35 src/tuning/tuningsysfs.cpp:45
+#: src/tuning/tuningusb.cpp:39 src/tuning/wifi.cpp:45
+msgid "Good"
+msgstr "良好"
+
+#: src/tuning/bluetooth.cpp:46 src/tuning/ethernet.cpp:50
+#: src/tuning/runtime.cpp:42 src/tuning/tunable.cpp:50
+#: src/tuning/tuningi2c.cpp:35 src/tuning/tuningsysfs.cpp:45
+#: src/tuning/tuningusb.cpp:39 src/tuning/wifi.cpp:45
+msgid "Bad"
+msgstr "欠佳"
+
+#: src/tuning/bluetooth.cpp:46 src/tuning/ethernet.cpp:50
+#: src/tuning/runtime.cpp:42 src/tuning/tunable.cpp:51
+#: src/tuning/tuningi2c.cpp:35 src/tuning/tuningsysfs.cpp:45
+#: src/tuning/tuningusb.cpp:39 src/tuning/wifi.cpp:45
+msgid "Unknown"
+msgstr "未知"
 
 #: src/tuning/bluetooth.cpp:48
 #, c-format
 msgid "Bluetooth device interface status"
 msgstr "蓝牙设备接口状态"
 
-#: src/tuning/cpufreq.cpp:44 src/tuning/ethernet.cpp:50
-#: src/tuning/tunable.cpp:48 src/tuning/wifi.cpp:45 src/tuning/runtime.cpp:41
-#: src/tuning/tuningusb.cpp:37 src/tuning/tuningsysfs.cpp:44
-msgid "Good"
-msgstr "良好"
-
-#: src/tuning/cpufreq.cpp:44 src/tuning/ethernet.cpp:50
-#: src/tuning/tunable.cpp:49 src/tuning/wifi.cpp:45 src/tuning/runtime.cpp:41
-#: src/tuning/tuningusb.cpp:37 src/tuning/tuningsysfs.cpp:44
-msgid "Bad"
-msgstr "欠佳"
-
-#: src/tuning/cpufreq.cpp:44 src/tuning/ethernet.cpp:50
-#: src/tuning/tunable.cpp:50 src/tuning/wifi.cpp:45 src/tuning/runtime.cpp:41
-#: src/tuning/tuningusb.cpp:37 src/tuning/tuningsysfs.cpp:44
-msgid "Unknown"
-msgstr "未知"
-
-#: src/tuning/cpufreq.cpp:47
-#, c-format
-msgid "Using 'ondemand' cpufreq governor"
-msgstr "使用 'ondemand'（按需调整）CPU 频率控制器"
-
-#: src/tuning/tuning.cpp:59
-msgid "Enable Audio codec power management"
-msgstr "启用音频设备电源管理"
-
-#: src/tuning/tuning.cpp:60
-msgid "NMI watchdog should be turned off"
-msgstr "关闭 NMI 监控"
-
-#: src/tuning/tuning.cpp:61
-msgid "Power Aware CPU scheduler"
-msgstr "支持能源调整的 CPU 调度器"
-
-#: src/tuning/tuning.cpp:62
-msgid "VM writeback timeout"
-msgstr "虚拟内存回写延时"
-
-#: src/tuning/tuning.cpp:79
-msgid "Tunables"
-msgstr "可调项"
-
-#: src/tuning/tuning.cpp:79
-msgid " <ESC> Exit | <Enter> Toggle tunable | <r> Window refresh"
-msgstr " <ESC> 退出 | <Enter> 切换可调整项 | <r> 窗口刷新"
-
 #: src/tuning/ethernet.cpp:54
 #, c-format
 msgid "Wake-on-lan status for device %s"
 msgstr "设备 %s 的局域网唤醒状态"
+
+#: src/tuning/runtime.cpp:48
+#, c-format
+msgid "Runtime PM for %s device %s"
+msgstr "%s 设备 %s 的运行时电源管理"
+
+#: src/tuning/runtime.cpp:50
+#, c-format
+msgid "%s device %s has no runtime power management"
+msgstr "%s 设备 %s 没有运行时电源管理"
+
+#: src/tuning/runtime.cpp:74
+#, c-format
+msgid "PCI Device %s has no runtime power management"
+msgstr "PCI 设备 %s 没有运行时电源管理"
+
+#: src/tuning/runtime.cpp:76
+#, c-format
+msgid "Runtime PM for PCI Device %s"
+msgstr "PCI 设备 %s 的运行时电源管理"
+
+#: src/tuning/tuning.cpp:62
+msgid "Enable Audio codec power management"
+msgstr "启用音频设备电源管理"
+
+#: src/tuning/tuning.cpp:63
+msgid "NMI watchdog should be turned off"
+msgstr "关闭 NMI 监控"
+
+#: src/tuning/tuning.cpp:64
+msgid "Power Aware CPU scheduler"
+msgstr "支持能源调整的 CPU 调度器"
+
+#: src/tuning/tuning.cpp:65
+msgid "VM writeback timeout"
+msgstr "虚拟内存回写延时"
+
+#: src/tuning/tuning.cpp:82
+msgid "Tunables"
+msgstr "可调项"
+
+#: src/tuning/tuning.cpp:82
+msgid " <ESC> Exit | <Enter> Toggle tunable | <r> Window refresh"
+msgstr " <ESC> 退出 | <Enter> 切换可调整项 | <r> 窗口刷新"
+
+#: src/tuning/tuning.cpp:244
+msgid "Script"
+msgstr ""
+
+#: src/tuning/tuning.cpp:258
+msgid "Software Settings in Need of Tuning"
+msgstr ""
+
+#: src/tuning/tuning.cpp:277
+msgid "Untunable Software Issues"
+msgstr ""
+
+#: src/tuning/tuning.cpp:301
+msgid "Optimal Tuned Software Settings"
+msgstr ""
+
+#: src/tuning/tuningi2c.cpp:57
+#, fuzzy, c-format
+msgid "Runtime PM for I2C %s %s (%s)"
+msgstr "%s 设备 %s 的运行时电源管理"
+
+#: src/tuning/tuningi2c.cpp:59
+#, fuzzy, c-format
+msgid "I2C %s %s has no runtime power management"
+msgstr "%s 设备 %s 没有运行时电源管理"
+
+#: src/tuning/tuningsysfs.cpp:123
+#, fuzzy, c-format
+msgid "Enable SATA link power management for %s"
+msgstr "启用 %s 上的 SATA 链路电源管理"
+
+#: src/tuning/tuningusb.cpp:54
+#, c-format
+msgid "Autosuspend for unknown USB device %s (%s:%s)"
+msgstr "自动挂起未知 USB 设备 %s (%s:%s)"
+
+#: src/tuning/tuningusb.cpp:71 src/tuning/tuningusb.cpp:73
+#: src/tuning/tuningusb.cpp:75
+#, c-format
+msgid "Autosuspend for USB device %s [%s]"
+msgstr "自动挂起 USB 设备 %s [%s]"
 
 #: src/tuning/wifi.cpp:48
 #, c-format
 msgid "Wireless Power Saving for interface %s"
 msgstr "接口 %s 的无线节电设置"
 
-#: src/tuning/runtime.cpp:47
-#, c-format
-msgid "Runtime PM for %s device %s"
-msgstr "%s 设备 %s 的运行时电源管理"
+#~ msgid "cpu rapl package %i"
+#~ msgstr "CPU RAPL 封装 %i"
 
-#: src/tuning/runtime.cpp:49
-#, c-format
-msgid "%s device %s has no runtime power management"
-msgstr "%s 设备 %s 没有运行时电源管理"
+#~ msgid "dram rapl package %i"
+#~ msgstr "DRAM RAPL 封装 %i"
 
-#: src/tuning/runtime.cpp:73
-#, c-format
-msgid "PCI Device %s has no runtime power management"
-msgstr "PCI 设备 %s 没有运行时电源管理"
+#~ msgid "Actual"
+#~ msgstr "实际"
 
-#: src/tuning/runtime.cpp:75
-#, c-format
-msgid "Runtime PM for PCI Device %s"
-msgstr "PCI 设备 %s 的运行时电源管理"
+#~ msgid "Power Consumption Summary"
+#~ msgstr "电量消耗概览"
 
-#: src/tuning/tuningusb.cpp:52
-#, c-format
-msgid "Autosuspend for unknown USB device %s (%s:%s)"
-msgstr "自动挂起未知 USB 设备 %s (%s:%s)"
+#~ msgid "GPU ops/second"
+#~ msgstr "每秒 GPU 操作数"
 
-#: src/tuning/tuningusb.cpp:69 src/tuning/tuningusb.cpp:71
-#: src/tuning/tuningusb.cpp:73
-#, c-format
-msgid "Autosuspend for USB device %s [%s]"
-msgstr "自动挂起 USB 设备 %s [%s]"
+#~ msgid "VFS ops/sec"
+#~ msgstr "每秒 VFS 操作数"
 
-#: src/tuning/tuningsysfs.cpp:139
-#, c-format
-msgid "Enable SATA link power Management for %s"
-msgstr "启用 %s 上的 SATA 链路电源管理"
+#~ msgid "GFX wakes/sec and"
+#~ msgstr "每秒 GFX 唤醒数和"
 
-#: src/calibrate/calibrate.cpp:236
-#, c-format
-msgid "Cannot create temp file\n"
-msgstr "无法创建临时文件\n"
+#~ msgid "Using 'ondemand' cpufreq governor"
+#~ msgstr "使用 'ondemand'（按需调整）CPU 频率控制器"
 
-#: src/calibrate/calibrate.cpp:255
-#, c-format
-msgid "Calibrating: CPU usage on %i threads\n"
-msgstr "正在校准 %i 线程中的 CPU 使用\n"
-
-#: src/calibrate/calibrate.cpp:270
-#, c-format
-msgid "Calibrating: CPU wakeup power consumption\n"
-msgstr "正在校准 CPU 唤醒电源消耗\n"
-
-#: src/calibrate/calibrate.cpp:287
-#, c-format
-msgid "Calibrating USB devices\n"
-msgstr "正在校准 USB 设备\n"
-
-#: src/calibrate/calibrate.cpp:289 src/calibrate/calibrate.cpp:306
-#: src/calibrate/calibrate.cpp:314 src/calibrate/calibrate.cpp:331
-#, c-format
-msgid ".... device %s \n"
-msgstr ".... 设备 %s \n"
-
-#: src/calibrate/calibrate.cpp:304
-#, c-format
-msgid "Calibrating radio devices\n"
-msgstr "正在校准无线电设备\n"
-
-#: src/calibrate/calibrate.cpp:328
-#, c-format
-msgid "Calibrating backlight\n"
-msgstr "正在校准背光\n"
-
-#: src/calibrate/calibrate.cpp:352 src/calibrate/calibrate.cpp:360
-#, c-format
-msgid "Calibrating idle\n"
-msgstr "正在校准空闲状态\n"
-
-#: src/calibrate/calibrate.cpp:371
-#, c-format
-msgid "Calibrating: disk usage \n"
-msgstr "正在校准磁盘使用\n"
-
-#: src/calibrate/calibrate.cpp:396
-msgid "Starting PowerTOP power estimate calibration \n"
-msgstr "正在启动 PowerTOP 电量预计校准 \n"
-
-#: src/calibrate/calibrate.cpp:419
-msgid "Finishing PowerTOP power estimate calibration \n"
-msgstr "正在完成 PowerTOP 电量预计校准 \n"
-
-#: src/calibrate/calibrate.cpp:423
-#, c-format
-msgid "Parameters after calibration:\n"
-msgstr "校准后参数：\n"
-
-#: src/main.cpp:91
-#, c-format
-msgid "PowerTOP version"
-msgstr "PowerTOP 版本"
-
-#: src/main.cpp:97
-msgid "Set refresh time out"
-msgstr "设定刷新延时"
-
-#: src/main.cpp:110
-msgid "Usage: powertop [OPTIONS]"
-msgstr "用法：powertop [选项]"
-
-#: src/main.cpp:111
-msgid "run in \"debug\" mode"
-msgstr "以“除错”模式运行"
-
-#: src/main.cpp:112
-msgid "print version information"
-msgstr "显示版本信息"
-
-#: src/main.cpp:113
-msgid "runs powertop in calibration mode"
-msgstr "以校准模式运行 PowerTOP"
-
-#: src/main.cpp:114
-msgid "Sets all tunable options to their GOOD setting"
-msgstr "将所有可调项设置为理想值"
-
-#: src/main.cpp:115
-msgid "[=devnode]"
-msgstr "[=devnode]"
-
-#: src/main.cpp:115
-msgid "uses an Extech Power Analyzer for measurements"
-msgstr "使用 Extech 电源分析仪进行测量"
-
-#: src/main.cpp:116 src/main.cpp:117
-msgid "[=FILENAME]"
-msgstr "[=文件名]"
-
-#: src/main.cpp:116
-msgid "generate a html report"
-msgstr "生成 HTML 报告"
-
-#: src/main.cpp:117
-msgid "generate a csv report"
-msgstr "生成 CSV 报告"
-
-#: src/main.cpp:118
-msgid "[=seconds]"
-msgstr "[=秒]"
-
-#: src/main.cpp:118
-msgid "generate a report for 'x' seconds"
-msgstr "生成指定 'x' 秒内的报告"
-
-#: src/main.cpp:119
-msgid "[=iterations] number of times to run each test"
-msgstr "[=重复数] 运行每项测试的次数"
-
-#: src/main.cpp:120
-msgid "[=workload]"
-msgstr "[=任务]"
-
-#: src/main.cpp:120
-msgid "file to execute for workload"
-msgstr "要执行的任务文件"
-
-#: src/main.cpp:121
-msgid "suppress stderr output"
-msgstr "阻止 stderr（标准错误）输出"
-
-#: src/main.cpp:122
-msgid "print this help menu"
-msgstr "显示此帮助菜单"
-
-#: src/main.cpp:124
-msgid "For more help please refer to the README"
-msgstr "请查阅 README 以获得更多帮助"
-
-#: src/main.cpp:201
-#, c-format
-msgid "Unknown issue running workload!\n"
-msgstr "运行任务时遇到未知问题！\n"
-
-#: src/main.cpp:242
-msgid "PowerTOP is out of memory. PowerTOP is Aborting"
-msgstr "PowerTOP 内存溢出。 PowerTOP 正在退出。"
-
-#: src/main.cpp:250
-#, c-format
-msgid "Preparing to take measurements\n"
-msgstr "正在准备测量\n"
-
-#: src/main.cpp:255
-#, c-format
-msgid "Taking %d measurement(s) for a duration of %d second(s) each.\n"
-msgstr "正在执行 %d 次测量，每次持续 %d 秒。\n"
-
-#: src/main.cpp:257
-#, c-format
-msgid "Measuring workload %s.\n"
-msgstr "正在测量任务 %s。\n"
-
-#: src/main.cpp:280
-#, c-format
-msgid "PowerTOP "
-msgstr "PowerTOP "
-
-#: src/main.cpp:281 src/main.cpp:328
-#, c-format
-msgid "exiting...\n"
-msgstr "正在退出…\n"
-
-#: src/main.cpp:327
-#, c-format
-msgid "Failed to mount debugfs!\n"
-msgstr "挂载 debugfs 失败！\n"
-
-#: src/main.cpp:422
-#, c-format
-msgid "Quiet mode failed!\n"
-msgstr "静默模式出错！\n"
-
-#: src/main.cpp:472
-msgid "Leaving PowerTOP"
-msgstr "正在离开 PowerTOP"
+#~ msgid "[=FILENAME]"
+#~ msgstr "[=文件名]"
