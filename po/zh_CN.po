@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Intel Corporation
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Tommy He <lovenemesis@gmail.com>, 2012
 msgid ""
@@ -9,31 +9,33 @@ msgstr ""
 "Project-Id-Version: PowerTOP\n"
 "Report-Msgid-Bugs-To: \"powertop@lists.01.org\"\n"
 "POT-Creation-Date: 2013-11-04 10:45-0800\n"
-"PO-Revision-Date: 2013-11-05 08:40+0000\n"
-"Last-Translator: Margie Foster <margie@linux.intel.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/PowerTOP/language/zh_CN/)\n"
+"PO-Revision-Date: 2018-03-01 14:54-0600\n"
+"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/"
+"PowerTOP/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.5\n"
 
 #: src/parameters/persistent.cpp:46 src/parameters/persistent.cpp:140
 msgid "Cannot save to file"
-msgstr ""
+msgstr "无法保存到文件"
 
 #: src/parameters/persistent.cpp:78 src/parameters/persistent.cpp:165
 msgid "Cannot load from file"
-msgstr ""
+msgstr "无法载入文件"
 
 #: src/parameters/persistent.cpp:123
 #, c-format
 msgid "Loaded %i prior measurements\n"
-msgstr "载入之前 %i 的测量。\n"
+msgstr "已载入之前 %i 个测量\n"
 
 #: src/display.cpp:70
 msgid "Overview"
-msgstr "概况"
+msgstr "概览"
 
 #: src/display.cpp:71
 msgid "Idle stats"
@@ -54,64 +56,64 @@ msgstr "退出"
 #: src/cpu/cpu_core.cpp:37 src/cpu/cpu_core.cpp:93 src/cpu/intel_cpus.cpp:245
 #, c-format
 msgid "  Core"
-msgstr ""
+msgstr "  核心"
 
 #: src/cpu/cpu.cpp:80
 #, c-format
 msgid "cpu package %i"
-msgstr "CPU 代号 %i"
+msgstr "CPU 封装 %i"
 
 #: src/cpu/cpu.cpp:81
 msgid "cpu package"
-msgstr "CPU 代号"
+msgstr "CPU 封装"
 
 #: src/cpu/cpu.cpp:84
 #, c-format
 msgid "cpu rapl package %i"
-msgstr ""
+msgstr "CPU RAPL 封装 %i"
 
 #: src/cpu/cpu.cpp:85
 msgid "cpu rapl package"
-msgstr ""
+msgstr "CPU RAPL 封装"
 
 #: src/cpu/cpu.cpp:89
 #, c-format
 msgid "dram rapl package %i"
-msgstr ""
+msgstr "DRAM RAPL 封装 %i"
 
 #: src/cpu/cpu.cpp:90
 msgid "dram rapl package"
-msgstr ""
+msgstr "DRAM RAPL 封装"
 
 #: src/cpu/cpu.cpp:459 src/cpu/cpu.cpp:586
 #, c-format
 msgid "Package %i"
-msgstr ""
+msgstr "封装 %i"
 
 #: src/cpu/cpu.cpp:491 src/cpu/cpu.cpp:606
 #, c-format
 msgid "Core %i"
-msgstr ""
+msgstr "核心 %i"
 
 #: src/cpu/cpu.cpp:493
 #, c-format
 msgid "GPU %i"
-msgstr ""
+msgstr "GPU %i"
 
 #: src/cpu/cpu.cpp:515 src/cpu/cpu.cpp:627
 #, c-format
 msgid "CPU %i"
-msgstr ""
+msgstr "CPU %i"
 
 #: src/cpu/cpu.cpp:807
 #, c-format
 msgid "cpu_idle event returned no state?\n"
-msgstr "CPU 空闲事件没有返回状态？\n"
+msgstr "cpu_idle（空闲）事件没有返回状态？\n"
 
 #: src/cpu/cpu.cpp:822
 #, c-format
 msgid "power or cpu_frequency event returned no state?\n"
-msgstr ""
+msgstr "power（电源）或 cpu_frequency（频率）事件没有返回状态？\n"
 
 #: src/cpu/cpu_linux.cpp:79
 msgid "C0 polling"
@@ -121,26 +123,26 @@ msgstr "C0 轮巡"
 #: src/cpu/intel_cpus.cpp:521
 #, c-format
 msgid " CPU %i"
-msgstr ""
+msgstr " CPU %i"
 
 #: src/cpu/cpu_package.cpp:47
 #, c-format
 msgid "Package"
-msgstr ""
+msgstr "封装"
 
 #: src/cpu/cpu_package.cpp:105 src/cpu/intel_cpus.cpp:297
 #, c-format
 msgid "  Package"
-msgstr ""
+msgstr "  封装"
 
 #: src/cpu/intel_cpus.cpp:81
 #, c-format
 msgid "read_msr cpu%d 0x%llx : "
-msgstr ""
+msgstr "read_msr cpu%d 0x%llx："
 
 #: src/cpu/intel_cpus.cpp:445
 msgid "C0 active"
-msgstr "C0 运行"
+msgstr "C0 已激活"
 
 #: src/cpu/intel_cpus.cpp:504
 #, c-format
@@ -174,14 +176,16 @@ msgstr "Intel 内建 USB 集线器"
 msgid ""
 "Model-specific registers (MSR)\t\t\t not found (try enabling "
 "CONFIG_X86_MSR).\n"
-msgstr ""
+msgstr "特殊模块寄存器 (MSR)\t\t\t未找到（尝试启用 CONFIG_X86_MSR)。\n"
 
 #: src/process/do_process.cpp:817
 #, c-format
 msgid ""
 "Estimated power: %5.1f    Measured power: %5.1f    Sum: %5.1f\n"
 "\n"
-msgstr "预计耗电量: %5.1f    测量耗电量: %5.1f    总计: %5.1f\n\n"
+msgstr ""
+"预计耗电量: %5.1f    实测耗电量: %5.1f    总计: %5.1f\n"
+"\n"
 
 #: src/process/do_process.cpp:828 src/devices/device.cpp:171
 #, c-format
@@ -207,7 +211,7 @@ msgstr "每秒 GPU 操作数"
 
 #: src/process/do_process.cpp:841
 msgid "VFS ops/sec and"
-msgstr "每秒 VFS 操作数和"
+msgstr "每秒 VFS 操作数及"
 
 #: src/process/do_process.cpp:841 src/process/do_process.cpp:1017
 msgid "CPU use"
@@ -240,7 +244,7 @@ msgstr "描述"
 
 #: src/process/do_process.cpp:899
 msgid "Overview of Software Power Consumers"
-msgstr "软件电量消耗概览"
+msgstr "每软件电量消耗概览"
 
 #: src/process/do_process.cpp:910
 msgid "Wakeups/s"
@@ -252,7 +256,7 @@ msgstr "每秒 GPU 操作数"
 
 #: src/process/do_process.cpp:914
 msgid "Disk IO/s"
-msgstr "每秒磁盘 IO 数"
+msgstr "每秒磁盘 IO 用量"
 
 #: src/process/do_process.cpp:916
 msgid "GFX Wakeups/s"
@@ -260,7 +264,7 @@ msgstr "每秒 GFX 唤醒数"
 
 #: src/process/do_process.cpp:1010
 msgid "Power Consumption Summary"
-msgstr "电量消耗摘要"
+msgstr "电量消耗概览"
 
 #: src/process/do_process.cpp:1014
 msgid "GPU ops/second"
@@ -278,17 +282,19 @@ msgstr "每秒 GFX 唤醒数和"
 #, c-format
 msgid ""
 "Too many open files, please increase the limit of open file descriptors.\n"
-msgstr ""
+msgstr "打开过多文件，请尝试提高打开文件标记的限制。\n"
 
 #: src/perf/perf.cpp:117
 #, c-format
 msgid "PowerTOP %s needs the kernel to support the 'perf' subsystem\n"
-msgstr "PowerTOP %s 需要内核支持 'perf' 子系统\n\n"
+msgstr ""
+"PowerTOP %s 需要内核 'perf' 子系统支持\n"
+"\n"
 
 #: src/perf/perf.cpp:118
 #, c-format
 msgid "as well as support for trace points in the kernel:\n"
-msgstr "以及支持内核中追溯点:\n"
+msgstr "以及内核中追溯点支持：\n"
 
 #: src/devices/device.cpp:177
 #, c-format
@@ -297,56 +303,56 @@ msgstr "系统基线耗电量为 %sW\n"
 
 #: src/devices/device.cpp:184
 msgid "Power est.    Usage     Device name\n"
-msgstr "预计电量    使用量     设备名\n"
+msgstr "预计电量    用量     设备名\n"
 
 #: src/devices/device.cpp:186
 msgid "              Usage     Device name\n"
-msgstr "              使用量     设备名\n"
+msgstr "              用量     设备名\n"
 
 #: src/devices/alsa.cpp:77
 #, c-format
 msgid "Audio codec %s: %s (%s)"
-msgstr "音频设备 %s: %s (%s)"
+msgstr "音频设备 %s：%s (%s)"
 
 #: src/devices/alsa.cpp:79 src/devices/alsa.cpp:81
 #, c-format
 msgid "Audio codec %s: %s"
-msgstr "音频设备 %s: %s"
+msgstr "音频设备 %s：%s"
 
 #: src/devices/runtime_pm.cpp:225
 #, c-format
 msgid "PCI Device: %s"
-msgstr "PCI 设备: %s"
+msgstr "PCI 设备：%s"
 
 #: src/devices/usb.cpp:49 src/devices/usb.cpp:92 src/devices/usb.cpp:94
 #, c-format
 msgid "USB device: %s"
-msgstr "USB 设备: %s"
+msgstr "USB 设备：%s"
 
 #: src/devices/usb.cpp:90
 #, c-format
 msgid "USB device: %s (%s)"
-msgstr "USB 设备: %s (%s)"
+msgstr "USB 设备：%s (%s)"
 
 #: src/devices/ahci.cpp:142
 #, c-format
 msgid "SATA link: %s"
-msgstr "SATA 连线: %s"
+msgstr "SATA 链路：%s"
 
 #: src/devices/ahci.cpp:144
 #, c-format
 msgid "SATA disk: %s"
-msgstr "SATA 磁盘: %s"
+msgstr "SATA 磁盘：%s"
 
 #: src/devices/rfkill.cpp:64 src/devices/rfkill.cpp:68
 #, c-format
 msgid "Radio device: %s"
-msgstr "无线电设备: %s"
+msgstr "无线设备：%s"
 
 #: src/devices/network.cpp:176
 #, c-format
 msgid "Network interface: %s (%s)"
-msgstr "网络接口: %s (%s)"
+msgstr "网络接口：%s (%s)"
 
 #: src/tuning/bluetooth.cpp:48
 #, c-format
@@ -363,7 +369,7 @@ msgstr "良好"
 #: src/tuning/tunable.cpp:49 src/tuning/wifi.cpp:45 src/tuning/runtime.cpp:41
 #: src/tuning/tuningusb.cpp:37 src/tuning/tuningsysfs.cpp:44
 msgid "Bad"
-msgstr "糟糕"
+msgstr "欠佳"
 
 #: src/tuning/cpufreq.cpp:44 src/tuning/ethernet.cpp:50
 #: src/tuning/tunable.cpp:50 src/tuning/wifi.cpp:45 src/tuning/runtime.cpp:41
@@ -374,7 +380,7 @@ msgstr "未知"
 #: src/tuning/cpufreq.cpp:47
 #, c-format
 msgid "Using 'ondemand' cpufreq governor"
-msgstr "使用 '按需调整' CPU 频率控制器"
+msgstr "使用 'ondemand'（按需调整）CPU 频率控制器"
 
 #: src/tuning/tuning.cpp:59
 msgid "Enable Audio codec power management"
@@ -382,11 +388,11 @@ msgstr "启用音频设备电源管理"
 
 #: src/tuning/tuning.cpp:60
 msgid "NMI watchdog should be turned off"
-msgstr "需要关闭 NMI 监控"
+msgstr "关闭 NMI 监控"
 
 #: src/tuning/tuning.cpp:61
 msgid "Power Aware CPU scheduler"
-msgstr "支持节电的 CPU 调度器"
+msgstr "支持能源调整的 CPU 调度器"
 
 #: src/tuning/tuning.cpp:62
 msgid "VM writeback timeout"
@@ -403,7 +409,7 @@ msgstr " <ESC> 退出 | <Enter> 切换可调整项 | <r> 窗口刷新"
 #: src/tuning/ethernet.cpp:54
 #, c-format
 msgid "Wake-on-lan status for device %s"
-msgstr "设备 %s 的网络唤醒状态"
+msgstr "设备 %s 的局域网唤醒状态"
 
 #: src/tuning/wifi.cpp:48
 #, c-format
@@ -444,7 +450,7 @@ msgstr "自动挂起 USB 设备 %s [%s]"
 #: src/tuning/tuningsysfs.cpp:139
 #, c-format
 msgid "Enable SATA link power Management for %s"
-msgstr ""
+msgstr "启用 %s 上的 SATA 链路电源管理"
 
 #: src/calibrate/calibrate.cpp:236
 #, c-format
@@ -454,51 +460,51 @@ msgstr "无法创建临时文件\n"
 #: src/calibrate/calibrate.cpp:255
 #, c-format
 msgid "Calibrating: CPU usage on %i threads\n"
-msgstr "校准：%i 线程中的 CPU 使用\n"
+msgstr "正在校准 %i 线程中的 CPU 使用\n"
 
 #: src/calibrate/calibrate.cpp:270
 #, c-format
 msgid "Calibrating: CPU wakeup power consumption\n"
-msgstr "校准：CPU 唤醒电源消耗\n"
+msgstr "正在校准 CPU 唤醒电源消耗\n"
 
 #: src/calibrate/calibrate.cpp:287
 #, c-format
 msgid "Calibrating USB devices\n"
-msgstr "校准 USB 设备\n"
+msgstr "正在校准 USB 设备\n"
 
 #: src/calibrate/calibrate.cpp:289 src/calibrate/calibrate.cpp:306
 #: src/calibrate/calibrate.cpp:314 src/calibrate/calibrate.cpp:331
 #, c-format
 msgid ".... device %s \n"
-msgstr ".... 设别 %s \n"
+msgstr ".... 设备 %s \n"
 
 #: src/calibrate/calibrate.cpp:304
 #, c-format
 msgid "Calibrating radio devices\n"
-msgstr "校准无线电设备\n"
+msgstr "正在校准无线电设备\n"
 
 #: src/calibrate/calibrate.cpp:328
 #, c-format
 msgid "Calibrating backlight\n"
-msgstr "校准背光\n"
+msgstr "正在校准背光\n"
 
 #: src/calibrate/calibrate.cpp:352 src/calibrate/calibrate.cpp:360
 #, c-format
 msgid "Calibrating idle\n"
-msgstr "校准空闲耗电\n"
+msgstr "正在校准空闲状态\n"
 
 #: src/calibrate/calibrate.cpp:371
 #, c-format
 msgid "Calibrating: disk usage \n"
-msgstr "校准：磁盘使用\n"
+msgstr "正在校准磁盘使用\n"
 
 #: src/calibrate/calibrate.cpp:396
 msgid "Starting PowerTOP power estimate calibration \n"
-msgstr "开始 PowerTOP 电量预计校准\n"
+msgstr "正在启动 PowerTOP 电量预计校准 \n"
 
 #: src/calibrate/calibrate.cpp:419
 msgid "Finishing PowerTOP power estimate calibration \n"
-msgstr "结束 PowerTOP 电量预计校准\n"
+msgstr "正在完成 PowerTOP 电量预计校准 \n"
 
 #: src/calibrate/calibrate.cpp:423
 #, c-format
@@ -512,7 +518,7 @@ msgstr "PowerTOP 版本"
 
 #: src/main.cpp:97
 msgid "Set refresh time out"
-msgstr "设定刷新延迟"
+msgstr "设定刷新延时"
 
 #: src/main.cpp:110
 msgid "Usage: powertop [OPTIONS]"
@@ -524,7 +530,7 @@ msgstr "以“除错”模式运行"
 
 #: src/main.cpp:112
 msgid "print version information"
-msgstr "打印版本信息"
+msgstr "显示版本信息"
 
 #: src/main.cpp:113
 msgid "runs powertop in calibration mode"
@@ -532,7 +538,7 @@ msgstr "以校准模式运行 PowerTOP"
 
 #: src/main.cpp:114
 msgid "Sets all tunable options to their GOOD setting"
-msgstr ""
+msgstr "将所有可调项设置为理想值"
 
 #: src/main.cpp:115
 msgid "[=devnode]"
@@ -560,7 +566,7 @@ msgstr "[=秒]"
 
 #: src/main.cpp:118
 msgid "generate a report for 'x' seconds"
-msgstr "生成指定 'x' 秒数的报告"
+msgstr "生成指定 'x' 秒内的报告"
 
 #: src/main.cpp:119
 msgid "[=iterations] number of times to run each test"
@@ -568,28 +574,28 @@ msgstr "[=重复数] 运行每项测试的次数"
 
 #: src/main.cpp:120
 msgid "[=workload]"
-msgstr ""
+msgstr "[=任务]"
 
 #: src/main.cpp:120
 msgid "file to execute for workload"
-msgstr ""
+msgstr "要执行的任务文件"
 
 #: src/main.cpp:121
 msgid "suppress stderr output"
-msgstr ""
+msgstr "阻止 stderr（标准错误）输出"
 
 #: src/main.cpp:122
 msgid "print this help menu"
-msgstr "打印此帮助菜单"
+msgstr "显示此帮助菜单"
 
 #: src/main.cpp:124
 msgid "For more help please refer to the README"
-msgstr "更多帮助请查阅 README"
+msgstr "请查阅 README 以获得更多帮助"
 
 #: src/main.cpp:201
 #, c-format
 msgid "Unknown issue running workload!\n"
-msgstr ""
+msgstr "运行任务时遇到未知问题！\n"
 
 #: src/main.cpp:242
 msgid "PowerTOP is out of memory. PowerTOP is Aborting"
@@ -598,17 +604,17 @@ msgstr "PowerTOP 内存溢出。 PowerTOP 正在退出。"
 #: src/main.cpp:250
 #, c-format
 msgid "Preparing to take measurements\n"
-msgstr "准备开始测量\n"
+msgstr "正在准备测量\n"
 
 #: src/main.cpp:255
 #, c-format
 msgid "Taking %d measurement(s) for a duration of %d second(s) each.\n"
-msgstr "执行 %d 次测量，每个持续 %d 秒。\n"
+msgstr "正在执行 %d 次测量，每次持续 %d 秒。\n"
 
 #: src/main.cpp:257
 #, c-format
 msgid "Measuring workload %s.\n"
-msgstr ""
+msgstr "正在测量任务 %s。\n"
 
 #: src/main.cpp:280
 #, c-format
@@ -618,7 +624,7 @@ msgstr "PowerTOP "
 #: src/main.cpp:281 src/main.cpp:328
 #, c-format
 msgid "exiting...\n"
-msgstr "退出……\n"
+msgstr "正在退出…\n"
 
 #: src/main.cpp:327
 #, c-format
@@ -628,8 +634,8 @@ msgstr "挂载 debugfs 失败！\n"
 #: src/main.cpp:422
 #, c-format
 msgid "Quite mode failed!\n"
-msgstr ""
+msgstr "静默模式出错！\n"
 
 #: src/main.cpp:472
 msgid "Leaving PowerTOP"
-msgstr "离开 PowerTOP"
+msgstr "正在离开 PowerTOP"
