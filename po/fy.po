@@ -627,7 +627,7 @@ msgstr "Keppeljen fan debugfs mislearre!\\n"
 
 #: src/main.cpp:422
 #, c-format
-msgid "Quite mode failed!\n"
+msgid "Quiet mode failed!\n"
 msgstr ""
 
 #: src/main.cpp:472

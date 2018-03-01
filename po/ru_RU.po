@@ -628,7 +628,7 @@ msgstr "Не удалось подмонтировать debugfs!\\n"
 
 #: src/main.cpp:422
 #, c-format
-msgid "Quite mode failed!\n"
+msgid "Quiet mode failed!\n"
 msgstr "Ошибка режима \"quite\"!\\n"
 
 #: src/main.cpp:472

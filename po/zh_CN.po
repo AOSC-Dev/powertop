@@ -633,7 +633,7 @@ msgstr "挂载 debugfs 失败！\n"
 
 #: src/main.cpp:422
 #, c-format
-msgid "Quite mode failed!\n"
+msgid "Quiet mode failed!\n"
 msgstr "静默模式出错！\n"
 
 #: src/main.cpp:472
