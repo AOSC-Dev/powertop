@@ -1,14 +1,14 @@
-# LANG translation for PowerTOP.
-# Copyright (C) 2016 Intel Corporation
-# This file is distributed under the same license as the PowerTOP package.
-# Arjan van de Ven <arjan@linux.intel.com>, 2010
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Intel Corporation
+# This file is distributed under the same license as the powertop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: powertop 2.9-pre\n"
+"Project-Id-Version: powertop v2.9-7-gf5d999d\n"
 "Report-Msgid-Bugs-To: \"powertop@lists.01.org\"\n"
-"POT-Creation-Date: 2016-08-03 17:04-0700\n"
+"POT-Creation-Date: 2018-03-01 14:32-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Turbo Mode"
 msgstr ""
 
-#: src/cpu/cpu_core.cpp:37 src/cpu/cpu_core.cpp:93 src/cpu/intel_cpus.cpp:312
+#: src/cpu/cpu_core.cpp:37 src/cpu/cpu_core.cpp:93 src/cpu/intel_cpus.cpp:322
 #, c-format
 msgid "  Core"
 msgstr ""
@@ -158,26 +158,26 @@ msgid "C0 polling"
 msgstr ""
 
 #: src/cpu/cpu_linux.cpp:242 src/cpu/cpu_linux.cpp:341
-#: src/cpu/intel_cpus.cpp:629
+#: src/cpu/intel_cpus.cpp:649
 #, c-format
 msgid " CPU %i"
 msgstr ""
 
-#: src/cpu/cpu_package.cpp:105 src/cpu/intel_cpus.cpp:390
+#: src/cpu/cpu_package.cpp:105 src/cpu/intel_cpus.cpp:410
 #, c-format
 msgid "  Package"
 msgstr ""
 
-#: src/cpu/intel_cpus.cpp:122
+#: src/cpu/intel_cpus.cpp:127
 #, c-format
 msgid "read_msr cpu%d 0x%llx : "
 msgstr ""
 
-#: src/cpu/intel_cpus.cpp:552
+#: src/cpu/intel_cpus.cpp:572
 msgid "C0 active"
 msgstr ""
 
-#: src/cpu/intel_cpus.cpp:610
+#: src/cpu/intel_cpus.cpp:630
 #, c-format
 msgid "Average"
 msgstr ""
@@ -705,7 +705,7 @@ msgstr ""
 
 #: src/process/do_process.cpp:1064
 #, c-format
-msgid "\\% usage"
+msgid "% usage"
 msgstr ""
 
 #: src/process/do_process.cpp:1065

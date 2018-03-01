@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PowerTOP\n"
 "Report-Msgid-Bugs-To: \"powertop@lists.01.org\"\n"
-"POT-Creation-Date: 2016-08-03 17:10-0700\n"
+"POT-Creation-Date: 2018-03-01 14:32-0600\n"
 "PO-Revision-Date: 2013-11-05 08:40+0000\n"
 "Last-Translator: Margie Foster <margie@linux.intel.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/"
@@ -86,7 +86,7 @@ msgstr ""
 msgid "Turbo Mode"
 msgstr ""
 
-#: src/cpu/cpu_core.cpp:37 src/cpu/cpu_core.cpp:93 src/cpu/intel_cpus.cpp:312
+#: src/cpu/cpu_core.cpp:37 src/cpu/cpu_core.cpp:93 src/cpu/intel_cpus.cpp:322
 #, c-format
 msgid "  Core"
 msgstr "  核心"
@@ -161,26 +161,26 @@ msgid "C0 polling"
 msgstr "C0 輪巡"
 
 #: src/cpu/cpu_linux.cpp:242 src/cpu/cpu_linux.cpp:341
-#: src/cpu/intel_cpus.cpp:629
+#: src/cpu/intel_cpus.cpp:649
 #, c-format
 msgid " CPU %i"
 msgstr " CPU %i"
 
-#: src/cpu/cpu_package.cpp:105 src/cpu/intel_cpus.cpp:390
+#: src/cpu/cpu_package.cpp:105 src/cpu/intel_cpus.cpp:410
 #, c-format
 msgid "  Package"
 msgstr "代號"
 
-#: src/cpu/intel_cpus.cpp:122
+#: src/cpu/intel_cpus.cpp:127
 #, c-format
 msgid "read_msr cpu%d 0x%llx : "
 msgstr ""
 
-#: src/cpu/intel_cpus.cpp:552
+#: src/cpu/intel_cpus.cpp:572
 msgid "C0 active"
 msgstr "C0 運作中"
 
-#: src/cpu/intel_cpus.cpp:610
+#: src/cpu/intel_cpus.cpp:630
 #, c-format
 msgid "Average"
 msgstr ""
@@ -718,7 +718,7 @@ msgstr ""
 
 #: src/process/do_process.cpp:1064
 #, fuzzy, c-format
-msgid "\\% usage"
+msgid "% usage"
 msgstr "用法"
 
 #: src/process/do_process.cpp:1065
