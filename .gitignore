@@ -74,6 +74,7 @@ Makefile.in
 /m4/wint_t.m4
 /m4/xsize.m4
 /missing
+/po/*.mo
 /po/Makevars.template
 /po/POTFILES
 /po/Rules-quot
