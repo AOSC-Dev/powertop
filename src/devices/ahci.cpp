@@ -150,7 +150,7 @@ ahci::ahci(char *_name, char *path): device()
 
 	diskname = model_name(path, _name);
 
-	if (strlen(diskname.c_str()) == 0)
+	if (diskname.length() == 0)
 		snprintf(humanname, sizeof(humanname), _("SATA link: %s"), _name);
 	else
 		snprintf(humanname, sizeof(humanname), _("SATA disk: %s"), diskname.c_str());

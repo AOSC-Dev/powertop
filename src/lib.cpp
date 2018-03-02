@@ -424,7 +424,7 @@ char *pretty_print(const char *str, char *buf, int len)
 
 	p = pretty_prints[str].c_str();
 
-	if (strlen(p) == 0)
+	if (pretty_prints[str].length() == 0)
 		p = str;
 
 	snprintf(buf, len,  "%s", p);
