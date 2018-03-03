@@ -115,11 +115,10 @@ static void __tuning_update_display(int cursor_pos)
 		char desc[4096];
 		pt_strcpy(res, all_tunables[i]->result_string());
 		pt_strcpy(desc, all_tunables[i]->description());
-		while (strlen(res) < 12)
-			strcat(res, " ");
 
-		while (strlen(desc) < 103)
-			strcat(desc, " ");
+		align_string(res, 12, 128);
+		align_string(desc, 103, 4096);
+
 		if ((int)i != cursor_pos) {
 			wattrset(win, A_NORMAL);
 			wprintw(win, "   ");

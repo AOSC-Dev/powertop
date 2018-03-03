@@ -333,10 +333,17 @@ void end_cpu_measurement(void)
 	perf_events->stop();
 }
 
-static void expand_string(char *string, unsigned int newlen)
+static void append_string_expanded_cpp(string &s, const char* more, unsigned int add_width)
 {
-	while (strlen(string) < newlen)
-		strcat(string, " ");
+	s.append(more);
+
+	int width = measure_string(more);
+	if (width < 0)
+		return;
+
+	int spaces_to_pad = add_width - width;
+	if (spaces_to_pad > 0)
+		s.resize(s.length() + spaces_to_pad, ' ');
 }
 
 static int has_state_level(class abstract_cpu *acpu, int state, int line)
@@ -826,11 +833,11 @@ void impl_w_display_cpu_states(int state)
 {
 	WINDOW *win;
 	char buffer[128];
-	char linebuf[1024];
+	string linebuf;
 	unsigned int package, core, cpu;
 	int line, loop, cstates_num, pstates_num;
 	class abstract_cpu *_package, * _core, * _cpu;
-	int ctr = 0;
+	int ctr = 0; // column count
 	unsigned int i;
 
 	cstates_num = get_cstates_num();
@@ -872,32 +879,37 @@ void impl_w_display_cpu_states(int state)
 			for (line = LEVEL_HEADER; line <= loop; line++) {
 				int first = 1;
 				ctr = 0;
-				linebuf[0] = 0;
+				linebuf.resize(0);
 
 				if (!has_state_level(_package, state, line))
 					continue;
 
 				buffer[0] = 0;
 				if (first_pkg == 0) {
-					strcat(linebuf, fill_state_name(_package, state, line, buffer));
-					expand_string(linebuf, ctr + 10);
-					strcat(linebuf, fill_state_line(_package, state, line, buffer));
-				}
-				ctr += 20;
-				expand_string(linebuf, ctr);
+					fill_state_name(_package, state, line, buffer);
+					append_string_expanded_cpp(linebuf, buffer, 10);
 
-				strcat(linebuf, "| ");
+					/* fortunately, fill_state_line always clears buffer. */
+					fill_state_line(_package, state, line, buffer);
+					append_string_expanded_cpp(linebuf, buffer, 10);
+				} else {
+					linebuf.resize(20, ' ');
+				}
+				ctr = 20;
+
+				linebuf.append("| ");
 				ctr += strlen("| ");
 
 				if (!_core->can_collapse()) {
 					buffer[0] = 0;
-					strcat(linebuf, fill_state_name(_core, state, line, buffer));
-					expand_string(linebuf, ctr + 10);
-					strcat(linebuf, fill_state_line(_core, state, line, buffer));
-					ctr += 20;
-					expand_string(linebuf, ctr);
+					fill_state_name(_core, state, line, buffer);
+					append_string_expanded_cpp(linebuf, buffer, 10);
 
-					strcat(linebuf, "| ");
+					fill_state_line(_core, state, line, buffer);
+					append_string_expanded_cpp(linebuf, buffer, 10);
+
+					ctr += 12;
+					linebuf.append("| ");
 					ctr += strlen("| ");
 				}
 
@@ -907,19 +919,19 @@ void impl_w_display_cpu_states(int state)
 						continue;
 
 					if (first == 1) {
-						strcat(linebuf, fill_state_name(_cpu, state, line, buffer));
-						expand_string(linebuf, ctr + 10);
+						fill_state_name(_core, state, line, buffer);
+						append_string_expanded_cpp(linebuf, buffer, 12);
 						first = 0;
 						ctr += 12;
 					}
 					buffer[0] = 0;
-					strcat(linebuf, fill_state_line(_cpu, state, line, buffer));
+					fill_state_line(_core, state, line, buffer);
+					append_string_expanded_cpp(linebuf, buffer, 10);
 					ctr += 10;
-					expand_string(linebuf, ctr);
 
 				}
-				strcat(linebuf, "\n");
-				wprintw(win, "%s", linebuf);
+				linebuf.append("\n");
+				wprintw(win, "%s", linebuf.c_str());
 			}
 			wprintw(win, "\n");
 			first_pkg++;

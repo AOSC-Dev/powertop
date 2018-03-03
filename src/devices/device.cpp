@@ -199,7 +199,7 @@ void report_devices(void)
 			else
 				sprintf(util, "%5i%s",  (int)all_devices[i]->utilization(),  all_devices[i]->util_units());
 		}
-		while (strlen(util) < 13) strcat(util, " ");
+		align_string(util, 13, 128);
 
 		P = all_devices[i]->power_usage(&all_results, &all_parameters);
 

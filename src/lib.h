@@ -88,6 +88,12 @@ extern int read_msr(int cpu, uint64_t offset, uint64_t *value);
 extern int write_msr(int cpu, uint64_t offset, uint64_t value);
 
 extern void align_string(char *buffer, size_t min_sz, size_t max_sz);
+extern void align_string_cpp(string &s, size_t min_sz);
+extern int measure_string(const char* cs, size_t len = -1);
+
+inline int measure_string_cpp(const string& s) {
+	return measure_string(s.c_str(), s.length());
+}
 
 extern void ui_notify_user_ncurses(const char *frmt, ...);
 extern void ui_notify_user_console(const char *frmt, ...);

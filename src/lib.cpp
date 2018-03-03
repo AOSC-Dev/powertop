@@ -23,6 +23,7 @@
  *	Arjan van de Ven <arjan@linux.intel.com>
  *	Peter Anvin
  */
+#define _XOPEN_SOURCE
 #include <map>
 #include <string.h>
 #include <iostream>
@@ -262,23 +263,81 @@ string read_sysfs_string(const char *format, const char *param)
 
 void align_string(char *buffer, size_t min_sz, size_t max_sz)
 {
-	size_t sz;
+	int width = measure_string(buffer, max_sz);
 
-	/** mbsrtowcs() allows NULL dst and zero sz,
-	 * comparing to mbstowcs(), which causes undefined
-	 * behaviour under given circumstances*/
-
-	/* start with mbsrtowcs() local mbstate_t * and
-	 * NULL dst pointer*/
-	sz = mbsrtowcs(NULL, (const char **)&buffer, max_sz, NULL);
-	if (sz == (size_t)-1) {
+	/* This may be incorrect, but remains a reasonable fallback. */
+	if (width < 0) {
 		buffer[min_sz] = 0x00;
 		return;
 	}
-	while (sz < min_sz) {
-		strcat(buffer, " ");
-		sz++;
+
+	if (width < min_sz) {
+		int chars_to_pad = min_sz - width;
+		int len = strlen(buffer);
+
+		/* Bad input... shrug it off. */
+		if (len > max_sz) {
+			buffer[max_sz] = 0x00;
+			return;
+		}
+
+		/* Compromise to avoid out-of-bound writes */
+		if (chars_to_pad + len + 1 > max_sz)
+			chars_to_pad = max_sz - len - 1;
+
+		memset(buffer + len, ' ', chars_to_pad);
+		buffer[len + chars_to_pad] = 0x00;
 	}
+}
+
+void align_string_cpp(string &s, size_t min_sz)
+{
+	int width = measure_string_cpp(s);
+	/* This may be incorrect, but remains a reasonable fallback. */
+	if (width < 0) {
+		s.resize(min_sz);
+	}
+
+	if (width < min_sz) {
+		int chars_to_pad = min_sz - width;
+		s.resize(s.length() + chars_to_pad, ' ');
+	}
+}
+
+int measure_string(const char* cs, size_t len) {
+	wchar_t *buf;
+	size_t wlen = 0;
+	int ret = -2; /* wcswidth returns -1 on non-prints, use a different ret for error */
+
+	/** mbsrtowcs() allows NULL dst and zero sz,
+	 * comparing to mbstowcs(), which causes undefined
+	 * behaviour under given circumstances
+	 * [citation needed] */
+
+	/* start with mbsrtowcs() local mbstate_t * and
+	 * NULL dst pointer*/
+	mbstate_t state;
+	memset(&state, 0x00, sizeof(state));
+
+	if (!cs)
+		return ret;
+
+	if (len == (size_t)-1)
+		len = strlen(cs);
+
+	buf = (wchar_t*) malloc(len * sizeof(wchar_t));
+	if (!buf)
+		return ret;
+
+	wlen = mbsrtowcs(buf, &cs, len, &state);
+	if (wlen == (size_t)-1) {
+		free(buf);
+		return -3; /* align_string should know it */
+	}
+
+	ret = wcswidth(buf, wlen);
+	free(buf);
+	return ret;
 }
 
 void format_watts(double W, char *buffer, unsigned int len)
